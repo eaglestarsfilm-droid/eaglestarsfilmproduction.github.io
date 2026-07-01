@@ -1,0 +1,103 @@
+/* ====== Page ====== */
+
+body{
+    margin:0;
+    padding:0;
+    background:#000;
+    font-family:Arial, sans-serif;
+}
+
+/* ====== Gallery Section ====== */
+
+#gallery{
+    width:100%;
+    max-width:1200px;
+    margin:auto;
+    padding:40px 20px;
+    text-align:center;
+}
+
+#gallery h2{
+    color:gold;
+    margin-bottom:20px;
+    font-size:35px;
+}
+
+/* ====== Slideshow ====== */
+
+.slideshow-container{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+    position:relative;
+    overflow:hidden;
+    border-radius:15px;
+}
+
+/* Slides */
+
+.fade{
+    display:none;
+    animation:fadeEffect 2s ease-in-out;
+}
+
+.fade img{
+    width:100%;
+    height:auto;
+    display:block;
+    border-radius:15px;
+}
+
+/* Fade Animation */
+
+@keyframes fadeEffect{
+
+    from{
+        opacity:0;
+    }
+
+    to{
+        opacity:1;
+    }
+
+}
+
+/* Optional Zoom Effect */
+
+.fade img{
+    animation:zoom 3s linear;
+}
+
+@keyframes zoom{
+
+    from{
+        transform:scale(1);
+    }
+
+    to{
+        transform:scale(1.05);
+    }
+
+}
+
+/* Responsive */
+
+@media(max-width:768px){
+
+    #gallery h2{
+        font-size:28px;
+    }
+
+}
+
+@media(max-width:480px){
+
+    #gallery{
+        padding:20px 10px;
+    }
+
+    #gallery h2{
+        font-size:22px;
+    }
+
+}
